@@ -1,0 +1,30 @@
+.forest-scene--air {
+  --forest-position: 65% 55%;
+  --forest-overlay: rgba(243, 239, 229, 0.92);
+  --forest-ink: #273d2e;
+}
+@media (max-width: 600px) {
+  .forest-scene--air {
+    --forest-position: 72% 55%;
+  }
+}
+.forest-scene--rest {
+  --forest-position: 72% 48%;
+  --forest-overlay: rgba(243, 239, 229, 0.94);
+  --forest-ink: #273d2e;
+}
+@media (max-width: 600px) {
+  .forest-scene--rest {
+    --forest-position: 72% 50%;
+  }
+}
+.forest-scene--massage {
+  --forest-position: 75% 50%;
+  --forest-overlay: rgba(243, 239, 229, 0.94);
+  --forest-ink: #273d2e;
+}
+@media (max-width: 600px) {
+  .forest-scene--massage {
+    --forest-position: 75% 50%;
+  }
+}

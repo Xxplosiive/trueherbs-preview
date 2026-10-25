@@ -1,0 +1,283 @@
+/* V7: shared forest atmosphere. Photos never sit behind tool input/results or reading text. */
+.forest-scene {
+  margin: 0;
+  min-width: 0;
+  color: var(--forest-ink, var(--forest));
+}
+.forest-image-frame {
+  overflow: hidden;
+  position: relative;
+}
+.forest-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: var(--forest-position, center);
+}
+.forest-scene figcaption,
+.forest-note {
+  font: 400 12px/1.8 var(--sans);
+  color: #596652;
+  letter-spacing: 0.04em;
+  margin-top: 10px;
+}
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 8%;
+}
+.about-layout h2 {
+  font-size: clamp(29px, 2.6vw, 40px);
+  max-width: 480px;
+}
+.about-layout .about-text {
+  padding-top: 25px;
+}
+.about-layout .about-text p {
+  max-width: 520px;
+  margin-bottom: 18px;
+}
+.about-layout .forest-scene {
+  align-self: center;
+}
+.about-layout .forest-image {
+  aspect-ratio: 16/11;
+}
+.forest-surface {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.forest-surface > .forest-scene--background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+.forest-surface .forest-image-frame,
+.forest-surface .forest-image {
+  height: 100%;
+}
+.forest-surface > .forest-scene--background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--forest-overlay);
+}
+.forest-surface-content {
+  position: relative;
+}
+.philosophy {
+  background: #e8ecdf;
+}
+.philosophy .forest-scene {
+  --forest-overlay: rgba(235, 239, 225, 0.92);
+}
+.forest-note {
+  margin-top: 5px;
+}
+.partnership-title > .forest-scene {
+  margin-top: 32px;
+  max-width: 490px;
+}
+.partnership-title .forest-image {
+  aspect-ratio: 16/9;
+}
+.forest-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.forest-intro-copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+.forest-intro-copy > .reading-back {
+  margin-bottom: 30px;
+}
+.forest-intro-copy > .section-caption {
+  margin-bottom: 20px;
+}
+.forest-intro--split,
+.forest-intro--landscape {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6%;
+  align-items: center;
+  padding-block: 35px 45px;
+}
+.forest-intro--landscape {
+  grid-template-columns: 1.15fr 1fr;
+}
+.forest-intro--landscape .forest-image {
+  height: 250px;
+}
+.forest-intro--split .forest-image {
+  aspect-ratio: 16/10;
+}
+.forest-intro--split h1,
+.forest-intro--landscape h1 {
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.65;
+}
+.forest-intro--split .page-summary,
+.forest-intro--landscape .page-summary {
+  font-size: 17px;
+  margin-top: 18px;
+}
+.forest-intro--texture > .forest-scene,
+.forest-product > .forest-scene--texture {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 40%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.12;
+  mask-image: linear-gradient(90deg, transparent, #000);
+}
+.forest-scene--texture .forest-image-frame,
+.forest-scene--texture .forest-image {
+  height: 100%;
+  width: 100%;
+}
+.forest-product {
+  position: relative;
+  isolation: isolate;
+}
+.forest-product > .forest-scene--texture {
+  width: 48%;
+  opacity: 0.07;
+}
+/* Leave product facts, reports and all interactive panels on their existing solid surface. */
+@media (max-width: 1000px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-layout h2,
+  .about-layout .about-text p {
+    max-width: 650px;
+  }
+  .about-layout .forest-scene {
+    max-width: 740px;
+    width: 100%;
+  }
+  .about-layout .forest-image {
+    aspect-ratio: 16/9;
+  }
+  .forest-intro--split,
+  .forest-intro--landscape {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .forest-intro--split .forest-scene {
+    max-width: 760px;
+  }
+  .forest-intro--split .forest-image {
+    aspect-ratio: 16/9;
+  }
+  .forest-intro--landscape .forest-image {
+    height: 170px;
+  }
+  .forest-intro--landscape .forest-scene {
+    width: 100%;
+  }
+  .partnership-title > .forest-scene {
+    max-width: 600px;
+  }
+}
+@media (max-width: 600px) {
+  .about-layout .about-text {
+    padding-top: 22px;
+  }
+  .about-layout h2 {
+    font-size: 29px;
+  }
+  .about-layout .forest-image {
+    aspect-ratio: 16/9;
+  }
+  .forest-intro--split,
+  .forest-intro--landscape {
+    padding-block: 22px 30px;
+    gap: 25px;
+  }
+  .forest-intro--split h1,
+  .forest-intro--landscape h1 {
+    font-size: 30px;
+  }
+  .forest-intro--landscape .forest-image {
+    height: 120px;
+  }
+  .forest-intro--split .forest-image {
+    aspect-ratio: 16/9;
+  }
+  .forest-intro-copy > .reading-back {
+    margin-bottom: 25px;
+  }
+  .forest-intro--texture > .forest-scene {
+    width: 40%;
+    opacity: 0.1;
+  }
+  .philosophy .forest-scene {
+    --forest-overlay: rgba(235, 239, 225, 0.95);
+  }
+  .partnership-title > .forest-scene {
+    margin-top: 25px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .forest-scene.reveal-once {
+    animation: forest-fade 0.85s ease both;
+  }
+  .forest-scene:not(.forest-scene--massage).reveal-once .forest-image {
+    animation: forest-settle 1.15s ease both;
+  }
+  .forest-scene--massage.reveal-once .forest-image {
+    animation: none;
+  }
+  .paused .reveal-once,
+  .paused .reveal-once .forest-image,
+  .not-visible .reveal-once,
+  .not-visible .reveal-once .forest-image {
+    animation-play-state: paused !important;
+  }
+}
+@keyframes forest-fade {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes forest-settle {
+  from {
+    transform: scale(1.018);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-once,
+  .reveal-once .forest-image {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+@media print {
+  .forest-scene {
+    display: none;
+  }
+  .about-layout,
+  .forest-intro--split,
+  .forest-intro--landscape {
+    display: block;
+  }
+  .forest-surface {
+    background: none;
+  }
+}

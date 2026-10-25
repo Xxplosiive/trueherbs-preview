@@ -1,0 +1,27 @@
+/* Company-only additions; original scene and personal-site styles stay untouched. */
+.v9-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:42px;margin:42px 0;list-style-position:inside;padding-left:0}
+.v9-columns article,.v9-columns li{border-top:1px solid var(--line);padding-top:24px;min-width:0}
+.v9-columns h3{font-family:var(--serif);font-size:24px;line-height:1.6;margin-bottom:18px}
+.v9-columns p{line-height:1.9;margin-bottom:20px}
+.v9-continuity{background:var(--sage)}
+.v9-continuity>p{max-width:850px;line-height:1.9;margin-top:20px}
+.v9-intro{padding-bottom:50px;background:var(--page)}
+.v9-intro h1{font:400 clamp(32px,4vw,52px)/1.5 var(--serif);max-width:900px;margin:24px 0}
+.v9-reading{max-width:850px;margin:auto;font-size:18px;line-height:1.9}
+.v9-reading h2{font:400 28px/1.6 var(--serif);margin:36px 0 18px}
+.v9-reading h3{font:400 23px/1.6 var(--serif);margin:24px 0 12px}
+.v9-reading p,.v9-reading ul{margin-bottom:22px}
+.v9-reading section{margin-bottom:36px}
+.v9-learning{padding-left:24px}.v9-learning li{padding-bottom:28px;border-bottom:1px solid var(--line)}
+#inquiry-draft label,#inquiry-result label{display:block;font-weight:600;margin:20px 0 8px}
+#inquiry-draft select,#inquiry-draft textarea,#inquiry-result textarea{display:block;width:100%;max-width:100%;font:inherit;color:var(--ink);background:var(--ivory);border:1px solid var(--muted);border-radius:0;padding:12px;resize:vertical}
+#inquiry-draft :focus-visible,#inquiry-result :focus-visible{outline:2px solid var(--forest);outline-offset:4px}
+#inquiry-error{color:#8c2923;min-height:1.9em}
+#inquiry-draft [aria-invalid=true]{border:2px solid #8c2923}
+#inquiry-result{padding:24px;background:var(--sage);margin-top:24px}
+#inquiry-help{font-size:14px;margin-top:10px}
+[hidden]{display:none!important}
+@media(max-width:760px){.v9-columns{grid-template-columns:1fr;gap:24px}.v9-intro h1{font-size:32px}.v9-reading{padding-inline:24px}.v9-reading h2{font-size:26px}#inquiry-result{padding:18px}.footer-links{flex-wrap:wrap}}
+/* Mobile reading uses native Chinese serif faces to avoid downloading the full
+   multi-subset CJK webfont on a constrained connection. Desktop keeps Noto. */
+@media(max-width:1000px){:root{--serif:'Songti TC','STSong','PMingLiU',Georgia,serif}}

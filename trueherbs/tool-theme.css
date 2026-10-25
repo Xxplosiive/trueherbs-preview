@@ -1,0 +1,41 @@
+.company-tool {
+  --paper: var(--ivory);
+  --ink: #243229;
+  --muted: #596354;
+  --green: #253d2c;
+  --gold: #8d7d55;
+  --line: #bcc5b4;
+  --light: #e8ecdf;
+  font-family: var(--sans);
+}
+.company-tool h2,
+.company-tool h3 {
+  font-family: var(--serif);
+  font-weight: 450;
+}
+.company-tool .panel,
+.company-tool .result {
+  border-radius: 0;
+  box-shadow: none;
+}
+.company-tool .result {
+  position: static;
+}
+.company-tool .button,
+.company-tool input,
+.company-tool select,
+.company-tool textarea,
+.company-tool .details {
+  border-radius: 0;
+}
+.company-tool .print-report p {
+  white-space: pre-wrap;
+}
+@media print {
+  .company-tool {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+}

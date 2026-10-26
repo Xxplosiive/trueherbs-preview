@@ -1,0 +1,6 @@
+/* Reserve a lower bound of the existing mounted UI, only when JS is enabled.
+   These floors are below the measured initial panel height, not extra scenery space. */
+.enhanced #company-tool-root {min-block-size:400px;}
+.enhanced #company-tool-root[data-tool='retention'] {min-block-size:320px;}
+@media(max-width:600px){.enhanced #company-tool-root {min-block-size:420px;}}
+@media print{.enhanced #company-tool-root {min-block-size:0;}}

@@ -1,0 +1,16 @@
+/* Phase 1: font correctness across all pages, without applying the pilot visual design. */
+:root {
+ --serif:var(--th-font-heading);
+ --sans:var(--th-font-body);
+ --font-serif:var(--th-font-heading);
+ --font-sans:var(--th-font-body);
+}
+html { -webkit-text-size-adjust:100%;text-size-adjust:100%;font-synthesis:none; }
+body {font-family:var(--th-font-body);}
+body :is(h1,h2,h3), body :is(h1,h2,h3)>span {font-family:var(--th-font-heading)!important;}
+button,input,select,textarea {font-family:var(--th-font-body);}
+
+body :is(strong,b) {font-weight:600;}
+
+body .safe-preview-notice,body .motion-symbol,body .text-link>span,body .button>span {font-family:var(--th-font-body);}
+body .offer-number {font-family:var(--th-font-heading);}

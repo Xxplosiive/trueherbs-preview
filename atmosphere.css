@@ -1,0 +1,28 @@
+/* Background-only extension. No heading, spacing, component or font-size redesign. */
+.has-atmosphere {position:relative;isolation:isolate;}
+.has-atmosphere > .atmosphere-layer {position:absolute;inset:0;z-index:-1;display:block;pointer-events:none;overflow:hidden;background:var(--atmosphere-mask-color,#F8F5EF);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 var(--atmosphere-edge-start,12%),#000 var(--atmosphere-edge-end,82%),transparent 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 var(--atmosphere-edge-start,12%),#000 var(--atmosphere-edge-end,82%),transparent 100%);}
+.has-atmosphere > .atmosphere-layer img {display:block;position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover;object-position:var(--atmosphere-position);opacity:var(--atmosphere-opacity,.2);}
+.has-atmosphere > .atmosphere-layer::after {content:'';position:absolute;inset:0;background:var(--atmosphere-mask-color,#F8F5EF);opacity:var(--atmosphere-mask-opacity,.08);pointer-events:none;}
+.editorial-scene {display:block;position:relative;}
+.editorial-scene-caption {display:block;position:absolute;left:10px;bottom:10px;padding:3px 7px;background:#F8F5EF;z-index:1;font-family:var(--th-font-body);font-size:12px;line-height:1.7;color:#233D35;}
+.editorial-scene .editorial-image {width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain;object-position:50% 50%;}
+/* Reading and operation areas retain existing opaque surfaces. */
+.article-page .reading-body,.editorial-pilot-page .pilot-reading {background:#F8F5EF;}
+
+.reading-hero-image:has(.editorial-scene)::after {content:none;}
+/* Darken secondary HTML text only over photography; preserve its size and hierarchy. */
+.has-atmosphere {--muted:#233D35;--th-muted:#233D35;}
+.has-atmosphere :is(.section-caption,.resource-type,.pilot-meta,.editorial-meta,.breadcrumb,.section-intro,.external-note,.doctor-review-note),
+.has-atmosphere figcaption,.has-atmosphere figcaption :is(p,span,small) {color:#233D35;}
+
+.atmosphere-morning{--atmosphere-position:72% 50%;--atmosphere-opacity:0.2;--atmosphere-mask-color:#F8F5EF;--atmosphere-mask-opacity:0.08;--atmosphere-edge-start:12%;--atmosphere-edge-end:82%;}
+@media(max-width:767px){.atmosphere-morning{--atmosphere-position:65% 50%;}}
+
+.atmosphere-moss{--atmosphere-position:66% 50%;--atmosphere-opacity:0.2;--atmosphere-mask-color:#F8F5EF;--atmosphere-mask-opacity:0.08;--atmosphere-edge-start:12%;--atmosphere-edge-end:82%;}
+@media(max-width:767px){.atmosphere-moss{--atmosphere-position:72% 50%;}}
+
+.atmosphere-fern{--atmosphere-position:72% 45%;--atmosphere-opacity:0.2;--atmosphere-mask-color:#F8F5EF;--atmosphere-mask-opacity:0.08;--atmosphere-edge-start:12%;--atmosphere-edge-end:82%;}
+@media(max-width:767px){.atmosphere-fern{--atmosphere-position:70% 50%;}}
+
+.atmosphere-path{--atmosphere-position:75% 50%;--atmosphere-opacity:0.2;--atmosphere-mask-color:#F8F5EF;--atmosphere-mask-opacity:0.08;--atmosphere-edge-start:12%;--atmosphere-edge-end:82%;}
+@media(max-width:767px){.atmosphere-path{--atmosphere-position:80% 50%;}}

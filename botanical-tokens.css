@@ -1,0 +1,31 @@
+/* Shared definitions only. New visual styling is opt-in on three approved pilot routes. */
+:root {
+ --th-forest:#233D35;
+ --th-ivory:#F8F5EF;
+ --th-warm-stone:#DCD1C5;
+ --th-rose:#8B5B60;
+ --th-sage:#315A49;
+ --th-text:var(--th-forest);
+ --th-muted:#59645D;
+ --th-font-heading:'Noto Serif TC','Noto Serif TC Complete','Songti TC','PMingLiU',serif;
+ --th-font-body:'Noto Sans TC','Noto Sans TC Complete','PingFang TC','Microsoft JhengHei',sans-serif;
+ --th-weight-book:400;
+ --th-weight-medium:500;
+ --th-weight-strong:600;
+ --th-space-1:.5rem;
+ --th-space-2:1rem;
+ --th-space-3:1.5rem;
+ --th-space-4:2rem;
+ --th-space-5:3rem;
+ --th-space-6:4.5rem;
+ --th-space-7:6rem;
+ --th-page-gutter:clamp(24px,6vw,88px);
+ --th-content-max:1280px;
+ --th-reading-max:740px;
+ --th-display-size:clamp(40px,4.8vw,70px);
+ --th-title-size:clamp(30px,3.2vw,46px);
+ --th-section-size:clamp(27px,2.5vw,38px);
+ --th-body-size:clamp(17px,1.2vw,18px);
+ --th-rule:1px solid var(--th-warm-stone);
+ --th-focus:var(--th-rose);
+}

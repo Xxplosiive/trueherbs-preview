@@ -1,0 +1,36 @@
+/* Homepage-only image enlargement, 2026-10-27.
+   Desktop photo widths are 1.4 times the af8aac1 baseline.
+   Small screens retain full images within the available width. */
+@media (min-width:1001px) {
+ body.botanical-editorial #home.hero-static-scene {
+  display:grid;grid-template-columns:minmax(0,1fr) 58.8vw;gap:2vw;
+  align-items:center;height:auto;min-height:650px;padding:48px 4% 48px 5%;
+ }
+ body.botanical-editorial #home.hero-static-scene .hero-content {
+  order:1;width:100%;max-width:none;margin:0;padding:0;min-width:0;
+ }
+ body.botanical-editorial #home.hero-static-scene .visual {
+  order:2;position:relative;inset:auto;top:auto;left:auto;right:auto;
+  width:100%;height:auto;aspect-ratio:1672/941;transform:none;margin:0;
+ }
+ body.botanical-editorial #home.hero-static-scene .photo-plane {
+  width:100%;height:auto;left:auto;top:auto;translate:none;transform:none;
+ }
+ body.botanical-editorial #products .approved-product-summary {
+  grid-template-columns:minmax(0,1fr) calc(64.4% - 112px);gap:8%;
+ }
+ body.botanical-editorial #products .approved-product-preview {
+  width:100%;max-width:none;margin:0;min-width:0;
+ }
+}
+@media (max-width:1000px) {
+ body.botanical-editorial #home.hero-static-scene .photo-plane {
+  width:100%;height:auto;left:auto;top:auto;translate:none;
+ }
+ body.botanical-editorial #products .approved-product-summary {
+  grid-template-columns:1fr;gap:24px;
+ }
+ body.botanical-editorial #products .approved-product-preview {
+  width:100%;max-width:none;margin:0;min-width:0;
+ }
+}

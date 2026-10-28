@@ -1,6 +1,6 @@
 /* Requested preview adjustments, 2026-10-28. Keep original brand artwork and hidden sections. */
 body.home-landing-edited #home h1.hero-subtitle {
- display:flex;flex-direction:column;gap:.45em;width:auto;max-width:none;
+ display:flex;flex-direction:column;gap:.675em;width:auto;max-width:none;
  font-family:'Noto Serif TC',var(--th-font-heading),serif;
  font-size:clamp(51px,4.05vw,57px);font-weight:400;line-height:1;
  letter-spacing:.005em;text-align:left;margin:24px 0 0;text-wrap:initial;
@@ -35,3 +35,11 @@ body.company-contact-page .contact-method dd {margin:0;overflow-wrap:anywhere;}
 body.company-contact-page .contact-method a {display:inline-flex;align-items:center;min-height:44px;font-size:clamp(23px,3vw,32px);line-height:1.5;text-decoration:underline;text-underline-offset:7px;}
 body.company-contact-page .contact-method a:focus-visible {outline:2px solid #233D35;outline-offset:6px;}
 body.company-contact-page .contact-method svg {width:22px;height:22px;flex:none;}
+
+/* Lift only the Hero kicker to the marked position; preserve title size and CTA flow. */
+@media(min-width:1201px) {
+ body.home-landing-edited #home .hero-content .lab-kicker {position:relative;top:clamp(-48px,-2.4vw,-28px);}
+}
+@media(max-width:1200px) {
+ body.home-landing-edited #home .hero-content .lab-kicker {position:relative;top:-16px;}
+}

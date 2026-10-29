@@ -31,3 +31,17 @@ The repository currently holds a static preview export rather than the complete 
 ## First-run verification
 
 Adding this runbook tests repository write access and the existing Pages deployment path. It does not demonstrate that a researched article has completed the entire scheduled publishing cycle. The first scheduled article must verify that cycle and report the result.
+
+## Required editorial value: analyse before writing
+
+Every article must earn its place through a specific, evidence-based business insight, not a rewritten press release. Before drafting, analyse the customer need and buying situation, paying customer, competing alternatives, and the causal path from the news to revenue, repeat visits, conversion, capacity utilisation or costs. Challenge the proposed opportunity with at least one counterargument. Reject weak topics rather than manufacture profit claims.
+
+Translate the analysis into natural public-facing prose with:
+- What actually happened and what is confirmed.
+- The customer need or business problem it reveals.
+- Who could benefit, who pays and why.
+- A concrete way to improve profit, including added labour, acquisition cost, commissions, fulfilment cost and capacity constraints where relevant. Distinguish revenue from contribution and net profit.
+- A small, low-cost test for a Taiwanese beauty or fitness business, with a measurable outcome and a stop/change condition.
+- Evidence limits and when the idea may not fit.
+
+Use hypothetical calculations only when they help and explicitly label all assumed values; never present them as actual brand results or guaranteed returns. Do not print internal framework labels such as JTBD, Jobs to Be Done, four forces or internal strategy vocabulary in public articles. Avoid emoji, formulaic praise and forced product promotion. Address readers as 您. Preserve Traditional Chinese and the site's calm professional voice.

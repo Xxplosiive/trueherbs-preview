@@ -11,3 +11,7 @@ body #offers .doctor-clinic-link:focus-visible{outline:2px solid #233D35;outline
 @media(max-width:600px){body #offers .doctor-clinic-map{height:240px;}}
 
 body.home-landing-edited #offers .doctor-card h3{font-family:'TrueHerbs Clinic Sans','Noto Sans TC',sans-serif!important;}
+
+/* Keep physician and clinic titles consistent despite the shared editorial cascade. */
+@font-face{font-family:'TrueHerbs Clinic Serif';font-style:normal;font-weight:200 900;font-display:swap;src:url('/trueherbs-preview/trueherbs/assets/fonts/clinic-titles-serif-20261029.woff2') format('woff2');}
+body.trueherbs-page #offers .doctor-name,body.trueherbs-page #offers .doctor-clinic h4{font-family:'TrueHerbs Clinic Serif','Noto Serif TC',serif!important;font-size:22px;font-weight:400;line-height:1.6;letter-spacing:.025em;}

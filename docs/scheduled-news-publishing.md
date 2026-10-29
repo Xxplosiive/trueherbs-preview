@@ -11,6 +11,14 @@ Configured 2026-10-29 at Ivan's request.
 - This automation is separate from the existing daily industry report.
 - Publication is authorised for this preview site. Do not change the production domain, DNS or noindex configuration.
 
+## Mandatory layout contract for every scheduled article
+
+All Monday/Wednesday/Friday posts MUST use the same reusable site-wide typography, link styling and interaction contract as existing articles. Read the latest `/editorial-system-20261029.css` and `trueherbs/site.js` before each publication. The shared stylesheet is installed by site.js on each route. Do not bypass it, remove site.js from new pages, or invent a new visual design or article-specific font role. Existing article/news shells must preserve `trueherbs-page article-page design-b editorial-pilot-page`, `.pilot-detail-hero`, `.pilot-reading`, headings, lead, category/date labels, source references, related links, footer and responsive behaviour. The visual system specifies Noto Serif TC for all H1-H4 titles and Noto Sans TC for body, list items, metadata and controls. Continue using licensed, verified per-article glyph coverage if new text requires it; such font subsets MUST use the same Noto typeface, and MUST NOT redefine the typography hierarchy, colours, margins or link behaviour. The 2026-10-29 news-specific font file is for glyph coverage only, not a template for future font overrides.
+
+Every new article must have exactly one meaningful H1, predictable H2 sections, H3 subheads if needed, a short summary, visible source links, consistent paragraph width and line spacing, and proper mobile stacking. All diagonal north-east/similar arrows (↗, ↖, ⇗, ➚, ⤴) are prohibited in visible links, buttons, card CTAs and source links. Replace them with normal descriptive link text; the shared styling provides contrasting hover, active and keyboard focus states. Keep actual destinations, back links and meaningful accessible labels. The global site.js removes legacy diagonal arrow decorations on previously exported pages; do not rely on JS cleanup to excuse inserting them in new HTML.
+
+Before every commit, explicitly compare a new article with one previously published industry-insights article and one industry-news article for role-consistent H1/H2/H3, body typeface, 18px desktop/17px mobile reading copy, source labels, article cards, link feedback and mobile overflow. Recheck the shared stylesheet is present and loadable on the new route. Fail publication rather than silently shipping an incompatible new font or layout. This obligation applies to all future scheduled runs, not just this first update.
+
 ## Each run
 
 1. Fetch the latest repository tree and any applicable AGENTS.md. Inspect current news pages and titles to avoid duplicate events.

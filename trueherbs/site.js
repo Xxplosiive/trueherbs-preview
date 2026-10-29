@@ -113,3 +113,33 @@ if (!reduced.matches && 'IntersectionObserver' in window) {
     .querySelectorAll('.offers .offer-rows article,.training-layout,.forest-copy,.forest-scene:not(.forest-scene--background):not(.forest-scene--texture)')
     .forEach((el) => once.observe(el));
 }
+
+// One global interaction stylesheet for every current and future route.
+// Load from the same origin so the existing Content Security Policy stays valid.
+(() => {
+  const href = '/trueherbs-preview/editorial-system-20261029.css';
+  if (!document.querySelector('link[data-th-editorial-system]')) {
+    const sheet = document.createElement('link');
+    sheet.rel = 'stylesheet';
+    sheet.href = href;
+    sheet.dataset.thEditorialSystem = '';
+    document.head.appendChild(sheet);
+  }
+  // Remove diagonal shortcut-arrow decorations while keeping anchors, names
+  // and destinations intact. Plain left/back and up/top arrows are unaffected.
+  const diagonal = /[↗↖⇗➚⤴]/gu;
+  document.querySelectorAll('a,button').forEach((control) => {
+    control.querySelectorAll('span[aria-hidden="true"]').forEach((span) => {
+      if (diagonal.test(span.textContent) && !span.textContent.replace(diagonal, '').trim()) {
+        span.remove();
+      }
+      diagonal.lastIndex = 0;
+    });
+    const walker = document.createTreeWalker(control, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) {
+      if (diagonal.test(node.nodeValue)) node.nodeValue = node.nodeValue.replace(/\s*[↗↖⇗➚⤴]/gu, '');
+      diagonal.lastIndex = 0;
+    }
+  });
+})();

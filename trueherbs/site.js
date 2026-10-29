@@ -118,7 +118,7 @@ if (!reduced.matches && 'IntersectionObserver' in window) {
 // Load from the same origin so the existing Content Security Policy stays valid.
 (() => {
   const href = '/trueherbs-preview/editorial-system-20261029.css';
-  if (!document.querySelector('link[data-th-editorial-system]')) {
+  if (!document.querySelector('link[href$="/editorial-system-20261029.css"]')) {
     const sheet = document.createElement('link');
     sheet.rel = 'stylesheet';
     sheet.href = href;

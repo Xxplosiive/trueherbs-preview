@@ -1,0 +1,13 @@
+/* Font coverage and small responsive reading enhancements for this publishing batch. */
+@font-face{font-family:'TrueHerbs News Sans 20261029';font-style:normal;font-weight:100 900;font-display:swap;src:url('/trueherbs-preview/trueherbs/assets/fonts/news-mindbody-sans-20261029.woff2') format('woff2')}
+@font-face{font-family:'TrueHerbs News Serif 20261029';font-style:normal;font-weight:200 900;font-display:swap;src:url('/trueherbs-preview/trueherbs/assets/fonts/news-mindbody-serif-20261029.woff2') format('woff2')}
+body:is(.news-auto-page,.news-auto-index){--sans:'TrueHerbs News Sans 20261029',sans-serif;--serif:'TrueHerbs News Serif 20261029',serif;--th-font-body:var(--sans);--th-font-heading:var(--serif);font-family:var(--sans)}
+body:is(.news-auto-page,.news-auto-index) main{font-family:var(--sans)!important}
+body:is(.news-auto-page,.news-auto-index) main :is(h1,h2,h3,h4){font-family:var(--serif)!important}
+.news-auto-page .news-table-scroll{max-width:100%;overflow-x:auto;margin:24px 0}
+.news-auto-page table{width:100%;border-collapse:collapse;min-width:420px;font-size:16px;line-height:1.8}
+.news-auto-page :is(th,td){text-align:left;vertical-align:top;padding:14px 12px;border-bottom:1px solid #D8D2C7}
+.news-auto-page th{background:#eeeadd;font-weight:600}
+.news-auto-page .news-formula{padding:20px;background:#eeeadd;border-left:3px solid #53725e}
+.news-auto-page .pilot-source{overflow-wrap:anywhere}
+.news-auto-page .news-table-scroll:focus-visible{outline:2px solid #233D35;outline-offset:4px}

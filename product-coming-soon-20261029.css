@@ -1,0 +1,28 @@
+/* TrueHerbs product collection: restrained teaser for an unannounced future item. */
+.products .product-coming-soon{
+  position:relative;display:flex;align-items:center;gap:clamp(20px,3vw,46px);
+  margin-top:40px;padding:clamp(26px,4vw,44px);border:1px solid #cbd3c7;
+  border-radius:12px;background:linear-gradient(125deg,#f5f5ef,#edf1e9);
+  color:#233d35;overflow:hidden;
+}
+.products .product-coming-soon::after{
+  content:"";position:absolute;right:-8%;top:-110%;
+  width:42%;height:240%;transform:rotate(23deg);
+  border-left:1px solid rgba(47,78,58,.11);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.3));pointer-events:none;
+}
+.products .product-coming-soon-number{flex:0 0 auto;align-self:flex-start;
+  display:grid;place-items:center;width:64px;height:64px;
+  border:1px solid #9daf9f;border-radius:50%;
+  font-family:Georgia,serif;font-size:26px;color:#46614d;
+}
+.products .product-coming-soon-body{position:relative;z-index:1}
+.products .product-coming-soon-kicker{font-size:12px;font-weight:600;letter-spacing:.17em;color:#627364;margin:0 0 8px}
+.products .product-coming-soon h3{font-family:Georgia,"Noto Serif TC",serif;font-size:clamp(25px,2.8vw,36px);
+  font-weight:500;line-height:1.35;letter-spacing:.015em;margin:0 0 12px}
+.products .product-coming-soon p:last-child{margin:0;color:#52634c;font-size:15px;line-height:1.8}
+@media(max-width:600px){
+  .products .product-coming-soon{padding:24px 20px;gap:18px}
+  .products .product-coming-soon-number{width:48px;height:48px;font-size:19px}
+  .products .product-coming-soon h3{font-size:24px}
+}

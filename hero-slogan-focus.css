@@ -1,0 +1,18 @@
+/* Homepage H1 only. Independent font and optical inter-line gap controls.
+   Font targets compare against the recorded pre-change computed styles,
+   not the already-enlarged concurrent preview, avoiding double enlargement. */
+body.home-landing-edited #home h1.hero-subtitle {
+ font-size:clamp(51px,4.05vw,57px);line-height:1.1;
+ gap:calc(clamp(51px,4.05vw,57px) * .35 + 1px);
+ max-width:100%;
+}
+body.home-landing-edited #home h1.hero-subtitle>span {line-height:1.1;}
+@media(max-width:1000px){
+ body.home-landing-edited #home h1.hero-subtitle {font-size:48px;gap:17.55px;}
+}
+@media(max-width:600px){
+ body.home-landing-edited #home h1.hero-subtitle {
+  font-size:min(clamp(37.5px,11.25vw,45px),calc((100vw - 48px)/8.08));
+  gap:calc(min(clamp(37.5px,11.25vw,45px),calc((100vw - 48px)/8.08)) * .35 + 1.25px);
+ }
+}
